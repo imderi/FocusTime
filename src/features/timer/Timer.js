@@ -11,10 +11,12 @@ import { colors } from '../../utils/colors';
 import { spacing } from '../../utils/sizes';
 import { Countdown } from '../../components/Countdown';
 
+const DEFAULT_TIME = 5
+
 export const Timer = ({ focusSubject, onTimerEnd, clearSubject }) => {
   useKeepAwake();
 
-  const [minutes, setMinutes] = useState(null);
+  const [minutes, setMinutes] = useState(DEFAULT_TIME);
   const [isStarted, setIsStarted] = useState(false);
   const [progress, setProgress] = useState(1);
 
@@ -36,7 +38,7 @@ export const Timer = ({ focusSubject, onTimerEnd, clearSubject }) => {
   // FUNCTION YG DI INVOKE SAAT TIMER HABIS
   const onEnd = () => {
     vibrate();
-    setMinutes(minutes);
+    setMinutes(DEFAULT_TIME);
     // PROGRESS == LOADING BAR , 1 == KEMBALI KE 100%
     setProgress(1);
     setIsStarted(false);

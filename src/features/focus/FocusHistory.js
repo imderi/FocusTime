@@ -8,9 +8,7 @@ const HistoryItem = ({ item, index }) => {
 };
 
 export const FocusHistory = ({ focusHistory, onClear }) => {
-  const onClearHistory = () => {
-    onClear();
-  };
+
   return (
     <>
       <SafeAreaView style={{ flex: 0.5, alignItems: 'center' }}>
@@ -22,6 +20,7 @@ export const FocusHistory = ({ focusHistory, onClear }) => {
               contentContainerStyle={{ flex: 1, alignItems: 'center' }}
               data={focusHistory}
               renderItem={HistoryItem}
+              keyExtractor={(item, index) => index.toString()}
             />
             <View style={styles.clearContainer}>
               <RoundedButton

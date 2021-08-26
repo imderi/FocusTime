@@ -1,9 +1,9 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import React from "react";
+import { View, StyleSheet } from "react-native";
 
-import { RoundedButton } from '../../components/RoundedButton';
+import { RoundedButton } from "../../components/RoundedButton";
 
-export const Timing = ({onChangeTime}) => {
+export const Timing = ({ onChangeTime }) => {
   return (
     <>
       <View style={styles.timingButton}>
@@ -22,6 +22,6 @@ export const Timing = ({onChangeTime}) => {
 const styles = StyleSheet.create({
   timingButton: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
   },
 });

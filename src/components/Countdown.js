@@ -60,7 +60,6 @@ export const Countdown = ({ minutes, isPaused, onProgress, onEnd }) => {
 };
 
 const styles = StyleSheet.create({
-  container: 'flex',
   text: {
     color: colors.white,
     fontSize: fontSizes.xxxl,
